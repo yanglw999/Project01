@@ -1,7 +1,7 @@
 public class PrimeNumber {
     public static void main(String[] args) {
         System.out.println("display the first 100 prime numbers: ");
-
+//
         int num = 2;
         int n = 1;
         while(n <= 100){

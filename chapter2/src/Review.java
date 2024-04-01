@@ -7,5 +7,6 @@ public class Review {
         System.out.println("run finished");
         System.out.println("hot-fix branch");
         System.out.println("ssh-git push to github");
+         System.out.println("pull test");
     }
 }

@@ -2,7 +2,8 @@ package chapter24.com;
 
 import java.util.Collection;
 // in abstract class, 'abstract' must be put ahead of abstract method, but in interface it does not
-public interface MyList<E> extends Collection<E> { //Using 'extends' to connect parent interface and sub-interface
+//Using 'extends' to connect parent interface and sub-interface
+public interface MyList<E> extends Collection<E> {
     // 1
     public void add(int index, E e);// will be overridden in child class
     //2
@@ -92,10 +93,19 @@ public interface MyList<E> extends Collection<E> { //Using 'extends' to connect 
     }
     //14
     public default Object[] toArray(){
-        return null;
+        Object[] arr = new Object[this.size()];
+        for(int i = 0; i < size() -1; i++){
+            arr[i] = this.get(i);
+        }
+        return arr;
     }
     //15
     public default <T> T[] toArray(T[] array){
+        array = (T[]) new Object[this.size()];
+        for(int i = 0; i < size() -1; i++){
+            array[i] = (T)this.get(i);
+        }
+
         return null;
     }
 }

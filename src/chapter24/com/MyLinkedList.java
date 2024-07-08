@@ -159,6 +159,8 @@ public class MyLinkedList<E> implements MyList<E> {
         Node<E> current = head;
         if(index == 0){
             return head.element;
+        }else if(index == size - 1){
+            return tail.element;
         }else {
             for (int i = 1; i <= index; i++) {
                 current = current.next;
@@ -208,6 +210,7 @@ public class MyLinkedList<E> implements MyList<E> {
         return new LinkedListIterator();
     }
 
+    // inner class,
     private class LinkedListIterator implements Iterator<E>{
         private Node<E> current = head;
         @Override
@@ -232,6 +235,8 @@ public class MyLinkedList<E> implements MyList<E> {
 
 
 
+// inner static class, the class is only used in LinkedList, so it's private
+    // the class does not need to access any instance members of LinkedList, so it's static
 
     private static class Node<E>{
         E element;

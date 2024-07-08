@@ -18,6 +18,7 @@ public class GCD {
                     break;
                 }
             }
+
             if(isGcd){
                 gcd = j;
                 break;
